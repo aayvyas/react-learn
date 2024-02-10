@@ -17,6 +17,7 @@ import {
   User,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const CartContext = createContext<{
   cartItems: number;
@@ -29,8 +30,15 @@ const ExUseContext = () => {
   return (
     <>
       <div className="flex justify-start flex-col items-center text-center p-2 h-full dark:bg-black">
-        <h1 className="font-mono  text-2xl">useContext</h1>
-        <p> lets you read and subscribe to context from your component.</p>
+        <Link
+          href={
+            "https://github.com/aayvyas/react-learn/blob/main/components/ExUseContext.tsx"
+          }
+          className="font-mono  text-2xl"
+        >
+          useContext
+        </Link>
+        <p> Let's you read and subscribe to context from your component.</p>
         <div className="grid grid-cols-3 w-full">
           <CartContext.Provider value={{ cartItems, setCartItems }}>
             <Cart />

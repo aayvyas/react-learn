@@ -19,6 +19,7 @@ import {
   User,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const CartContext = createContext<{
   cart: CartState;
@@ -55,8 +56,15 @@ const ExUseReducer = () => {
   return (
     <>
       <div className="flex justify-start flex-col items-center text-center p-2 h-full dark:bg-black">
-        <h1 className="font-mono  text-2xl">useReducer</h1>
-        <p> lets you define how you want to update the state</p>
+        <Link
+          href={
+            "https://github.com/aayvyas/react-learn/blob/main/components/ExUseReducer.tsx"
+          }
+          className="font-mono  text-2xl"
+        >
+          useReducer
+        </Link>
+        <p> Let's you define how you want to update the state.</p>
         <div className="grid grid-cols-3 w-full">
           <CartContext.Provider value={{ cart: state, setCart: dispatch }}>
             <Cart />

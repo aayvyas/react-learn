@@ -3,6 +3,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Button from "./ui/Button";
 import clsx from "clsx";
+import Link from "next/link";
 
 const ExUseEffect = () => {
   let [counter, setCounter] = useState(0);
@@ -22,7 +23,14 @@ const ExUseEffect = () => {
   return (
     <>
       <div className="flex justify-start flex-col items-center text-center p-2 h-full dark:bg-black">
-        <h1 className="font-mono  text-2xl">useEffect</h1>
+        <Link
+          href={
+            "https://github.com/aayvyas/react-learn/blob/main/components/ExUseContext.tsx"
+          }
+          className="font-mono  text-2xl"
+        >
+          useEffect
+        </Link>
         <p>Let's you schronize a component with external system (stop)</p>
         <div className="flex flex-col justify-center w-32 h-16 rounded-2xl mt-5 bg-white dark:bg-black border border-zinc-200 dark:border-zinc-800 shadow-md text-center align-middle items-center">
           <p

@@ -3,6 +3,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Button from "./ui/Button";
 import clsx from "clsx";
+import Link from "next/link";
 
 const ExUseRef = () => {
   let [counter, setCounter] = useState(0);
@@ -22,7 +23,14 @@ const ExUseRef = () => {
   return (
     <>
       <div className="flex justify-start flex-col items-center text-center h-full p-2 dark:bg-black">
-        <h1 className="font-mono   text-2xl">useRef</h1>
+        <Link
+          href={
+            "https://github.com/aayvyas/react-learn/blob/main/components/ExUseRef.tsx"
+          }
+          className="font-mono  text-2xl"
+        >
+          useRef
+        </Link>
         <p>Let's you reference a value that's not needed for rendering.</p>
         <div className="flex flex-col justify-center w-32 h-16 rounded-2xl mt-5 bg-white dark:bg-black border border-zinc-200 dark:border-zinc-800 shadow-md text-center align-middle items-center">
           <p

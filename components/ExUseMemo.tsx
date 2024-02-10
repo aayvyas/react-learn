@@ -4,6 +4,7 @@ import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import Button from "./ui/Button";
 import clsx from "clsx";
 import TextInput from "./ui/TextInput";
+import Link from "next/link";
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -46,8 +47,15 @@ const ExUseMemo = () => {
   return (
     <>
       <div className="flex justify-start flex-col items-center text-center p-2 h-full dark:bg-black">
-        <h1 className="font-mono  text-2xl">useMemo</h1>
-        <p>lets you cache the result of a calculation between re-renders.</p>
+        <Link
+          href={
+            "https://github.com/aayvyas/react-learn/blob/main/components/ExUseMemo.tsx"
+          }
+          className="font-mono  text-2xl"
+        >
+          useMemo
+        </Link>
+        <p>Let's you cache the result of a calculation between re-renders.</p>
         <TextInput
           placeholder="Enter a number"
           onChange={setInput}
